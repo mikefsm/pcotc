@@ -1,0 +1,20 @@
+%nav.navbar.navbar-inverse.navbar-static-top
+  .container
+    .navbar-header
+      %button{ type: "button", class: "navbar-toggle collapsed", 'data-toggle' => "collapse", 'data-target' => "#navbar", 'aria-expanded' => "false", 'aria-controls' => "navbar" }
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+        %a.navbar-brand= link_to 'PCOTC', root_path
+
+    #navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to 'Home', root_path
+        %li= link_to 'Club Officers', officers_path
+        %li= link_to 'Training Info', officers_path
+        %li= link_to 'Events Calendar', officers_path
+        %li= link_to 'Photo Gallery', officers_path
+        %li= link_to 'News & Brags', officers_path
+        %li= link_to 'Obedience Trial', officers_path
+        
