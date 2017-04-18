@@ -1,0 +1,15 @@
+/ = error_messages_for(@closing)
+  
+
+.formbox
+  = form_for @training do |f|
+    %dl
+      %dt= f.label :title
+      %dd= f.text_field :title
+      
+      %dt= f.label :description
+      %dd= f.text_area :description
+
+      
+
+    = submit_tag button_title#, data: { disable_with: working_msg }

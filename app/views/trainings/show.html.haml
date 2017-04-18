@@ -1,0 +1,5 @@
+.container
+  %h1
+    = @training.title
+    %small= link_to '(edit)', edit_training_path(@training)
+  %p= @training.description

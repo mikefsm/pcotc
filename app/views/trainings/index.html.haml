@@ -1,0 +1,46 @@
+.container
+  .clearfix
+    %h1
+      .pull-left Training Classes!
+
+      .pull-right
+        = link_to 'Add New', new_training_path, class: 'btn btn-default'
+
+
+  %h3 What is the value of obedience training?
+  
+  %p Wouldn't you like to have a more satisfying relationship with your dog? Wouldn't it be great if your dog came when it was called, walked WITH you on command, and stayed put when asked? If you answered yes, then obedience training is for you and your dog! By the end of the 10 week basic class, you will understand how your dog learns and how to clearly communicate with it. Your dog will learn what is expected of it at home, out in public and around other dogs. Your pet will become a wonderful companion and an accepted member of the community. Isn't that why you got a dog in the first place?
+
+
+  %h3 What will you gain?
+
+  %p Dogs are pack animals. They enjoy being part of the family. In turn, well-trained dogs are sources of pride and pleasure. Take an obedience class with your dog. Practice, practice, practice. Throw in lots of praise, play, and a bit of correction. You and your dog will gain mutual respect and trust allowing you both to more fully enjoy your relationship. You and your "best freind" will then have the opportuntiy to be recognized by the American Kennel Club for all your hard work. Demonstrate those new-found obedience skills to one of our certified CGC testers and your dog will be awarded a "Canine Good Citizen" certificate inscribed with both your names
+
+  %h3 Obedience Training Classes
+
+  %p Although dogs may be trained without ever attending classes, there are some definite advantages to the group environment. Dogs, like people, require socialization. They need exposure to new faces, places, sights, and sounds. The stimuli and distractions of a class setting help both you and your dog to focus and grow in confidence and teamwork. The class consists of folks just like you facing similiar challenges with their canine friends. Each of you can relate to, and benefit from , one another's experiences. Frankly, you will probably train more consistently throughout the week knowing you have a class to attend each Thursday night. Most importantly, obedience class is just plain FUN!
+
+  %h3 What does the dog learn?
+
+  %p Using motivational training techniques with lots of positive reinforcement, your dog learns to give you its attention, to walk on a loose leash to sit, stand and down on command, to hold those postures until released, to come when called, and to behave appropriately in social settings. You, the trainer, will be given instruction in the basics of canine learning theory, the importance of praise and play in training, how to give an effective correction and how to build and maintain your dog's healthy attitude towards training, and learning, in general. Basic canine health care, grooming and nutrition are also discussed.
+
+  %h3 Who trains the dog?
+
+  %p You or another family member will train the dog under the guidance of the instructor, instructor's assistant and the training director. We train you and you train your dog! Individual attention is given, as required, and the training methods are tailored to suit the needs and abilities of both you and your dog. Questions are encouraged both during and after class and a printed weekly training plan is provided after each session.
+
+  %h3 How old must a dog be?
+
+  %p Puppies must be at least 16 weeks old and all dogs must be current on their inoculations. These include vaccinations for rabies, distemper, hepatitis, parvo and parainfluenza. A bordatella, or kennel cough inoculation is also recommended. Because you CAN teach an old dog new tricks, there is no maximum age limit for dogs attending class.
+
+  %h3 Training Equipment
+
+  %p Each week you will need to bring one hungry dog and one motivated trainer (that would be you). You will also need training treats and a training toy if your dog is toy motivated. Please have your dog on a 6 foot leach attached to the collar of your choice. Your instructor will discuss equipment on the first night of class and will help you select the appropriate training collar for you dog. We have leashes available for purchase and if you choose to train in a slip collar, one will be provided at no extra charge. You must also provide proof of inoculations when you register for class.
+
+  .row
+    - @trainings.each do |training|
+      .col-lg-3
+        .panel.panel-default
+          .panel-heading
+            %h4= link_to training.title, training_path(training)
+            %p= truncate(training.description, length: 125) { link_to 'view class', training_path(training) }
+
