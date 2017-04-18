@@ -1,0 +1,22 @@
+/ = error_messages_for(@closing)
+  
+
+.formbox
+  = form_for @officer do |f|
+    %dl
+      %dt= f.label :first_name
+      %dd= f.text_field :first_name
+      
+      %dt= f.label :last_name
+      %dd= f.text_field :last_name
+
+      %dt= f.label :office_name
+      %dd= select :officer, 'office_name', Officer.office_names.keys, { prompt: 'Please Select' }
+
+      %dt= f.label :email
+      %dd= f.text_field :email
+
+      %dt= f.label :phone
+      %dd= f.text_field :phone
+
+    = submit_tag button_title#, data: { disable_with: working_msg }

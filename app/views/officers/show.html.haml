@@ -1,0 +1,5 @@
+.container
+  %h1
+    = @officer.full_name
+    %small= link_to '(edit)', edit_officer_path(@officer)
+  %h3= @officer.office_name.titleize
